@@ -14,8 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Go
-        uses: actions/setup-gp
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.26.0"
 
       - name: Build Code
-        uses: ""
-      - run: scripts/buildprod.sh
+        run: scripts/buildprod.sh
