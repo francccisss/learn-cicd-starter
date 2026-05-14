@@ -26,10 +26,3 @@ func (cfg *apiConfig) middlewareAuth(handler authedHandler) http.HandlerFunc {
 		handler(w, r, user)
 	}
 }
-
-func copystr(src []rune, dst []rune) {
-	for i := range src {
-		dst[i] = src[i]
-	}
-
-}
