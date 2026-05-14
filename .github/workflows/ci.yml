@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: "1.26.0"
+          #  steps for actual test coverage
       - name: Test Go
         run: go test ./... -cover
       - name: Install Gosec
@@ -36,6 +37,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: "1.26.0"
+          # steps for actual static analysis
 
       - name: Check code style
         run: test -z $(go fmt ./...)
