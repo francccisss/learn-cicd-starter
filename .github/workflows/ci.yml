@@ -20,6 +20,6 @@ jobs:
 
       - name: Test Go
         run: go test ./... -cover
-      #
-      # - name: Force Failure
-      #   run: (exit 1)
+
+      - name: Format Go
+        run: go fmt
